@@ -8,7 +8,7 @@ import io
 app = Flask(__name__)
 
 # Permitir CORS para qualquer origem durante o desenvolvimento
-CORS(app, resources={r"/api/*": {"origins": "https://migration-ashy.vercel.app"}})
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 def get_page(url):
     response = requests.get(url)
