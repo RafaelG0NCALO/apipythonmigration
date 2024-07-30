@@ -44,6 +44,10 @@ def process_links(html, base_url):
                     records.append({'URL': file_url, 'Status': f'Status inesperado: {status_code}'})
     return records
 
+@app.route('/')
+def index():
+    return "API para verificação de URLs está funcionando."
+
 @app.route('/check-urls', methods=['POST'])
 def check_urls():
     data = request.json
